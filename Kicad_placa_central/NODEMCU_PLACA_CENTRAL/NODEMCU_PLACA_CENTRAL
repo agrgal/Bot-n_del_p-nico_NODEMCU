@@ -1,0 +1,9 @@
+Reference, Quantity, Value, Footprint, Datasheet
+BZ1 ,1,"Buzzer","Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","~"
+D1 ,1,"LED","LED_THT:LED_D5.0mm","~"
+J1 ,1,"Conn_01x02_Female","Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical","~"
+O1 ,1,"OLED","Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical",""
+R1 ,1,"220","Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal","~"
+R2 ,1,"10k","Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal","~"
+SW1 ,1,"SW_Push_Open_Dual_x2","Button_Switch_THT:SW_PUSH_6mm_H13mm",""
+U1 ,1,"NodeMCU1.0(ESP-12E)","ESP8266:NodeMCU1.0(12-E)",""

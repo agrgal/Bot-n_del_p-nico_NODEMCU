@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Fritzing (http://www.fritzing.org/) -->
+<netlist date="dom. abr. 19 21:31:28 2020" sketch="NodeMCU_CENTRAL_V01.fzz">
+ <net>
+  <connector id="connector0" name="Pin 0">
+   <part id="854172750" title="10kΩ Resistor" label="R2"/>
+  </connector>
+  <connector id="connector1" name="Pin 2">
+   <part id="854173250" title="Pushbutton" label="S4"/>
+  </connector>
+  <connector id="connector0" name="Pin 1">
+   <part id="854173250" title="Pushbutton" label="S4"/>
+  </connector>
+  <connector id="connector0" name="D0">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector1" name="pin2">
+   <part id="854121280" title="Piezo Speaker" label="J1"/>
+  </connector>
+  <connector id="connector7" name="D5">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector0" name="pin1">
+   <part id="854121280" title="Piezo Speaker" label="J1"/>
+  </connector>
+  <connector id="connector16" name="GND">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+  <connector id="connector13" name="GND">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+  <connector id="connector33" name="GND">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+  <connector id="connector6" name="GND">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+  <connector id="connector0" name="1">
+   <part id="854204410" title="Header 4" label="JP1"/>
+  </connector>
+  <connector id="connector1" name="Pin 1">
+   <part id="854172730" title="220Ω Resistor" label="R1"/>
+  </connector>
+  <connector id="connector1" name="Pin 1">
+   <part id="854172750" title="10kΩ Resistor" label="R2"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector2" name="Pin 3">
+   <part id="854173250" title="Pushbutton" label="S4"/>
+  </connector>
+  <connector id="connector3" name="Pin 4">
+   <part id="854173250" title="Pushbutton" label="S4"/>
+  </connector>
+  <connector id="connector1" name="2">
+   <part id="854204410" title="Header 4" label="JP1"/>
+  </connector>
+  <connector id="connector5" name="3V3">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+  <connector id="connector14" name="3V3">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+  <connector id="connector19" name="3V3">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector1" name="anode">
+   <part id="18448850" title="Red (633nm) LED" label="LED1"/>
+  </connector>
+  <connector id="connector3" name="D3">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector0" name="cathode">
+   <part id="18448850" title="Red (633nm) LED" label="LED1"/>
+  </connector>
+  <connector id="connector0" name="Pin 0">
+   <part id="854172730" title="220Ω Resistor" label="R1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector2" name="3">
+   <part id="854204410" title="Header 4" label="JP1"/>
+  </connector>
+  <connector id="connector1" name="D1">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector3" name="4">
+   <part id="854204410" title="Header 4" label="JP1"/>
+  </connector>
+  <connector id="connector2" name="D2">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector4" name="D4">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector15" name="Vin">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector9" name="D7">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector37" name="SD1">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector17" name="RST">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector8" name="D6">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector11" name="RX">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector10" name="D8">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector12" name="TX">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector42" name="A0">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector39" name="SD3">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector41" name="RSV">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector36" name="CMD">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector34" name="CLK">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector40" name="RSV">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector18" name="EN">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector38" name="SD2">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+ <net>
+  <connector id="connector35" name="SD0">
+   <part id="854152370" title="NodeMCU V1.0" label="U1"/>
+  </connector>
+ </net>
+</netlist>

@@ -1,0 +1,151 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Desconocido </title></head><body>
+<h1 id="kicad-esp8266-a-library-for-kicad">kicad-ESP8266 - a library for KiCAD</h1>
+<p>This project has both schematic symbols, footprints, and 3d models for
+ESP8266 based modules. It is a work-in-progress. Additions and
+corrections are welcome. Enter a pull request or file an issue on
+GitHub.</p>
+<p>The present modules are:</p>
+<ul>
+<li>
+<p>ESP-01  - Note that there are two versions of this module available on
+              open market. The schematic symbol is for the <code>v090</code> version
+              which is probably the same as the <code>v080</code>. There is an older
+              version that does not include any GPIO signals. The footprint
+              is the same for all of the ESP-01 modules.</p>
+</li>
+<li>
+<p>ESP-12  - This is includes an alias part, ESP-07v2, that is suitable
+              for the 16 pin variant of the ESP-07. Note that there is a 14
+              pin version of the ESP-07 that has different signals and
+              pinout. The footprint for the ESP-12 (and ESP-07v2)
+              elongated through-hole pads to match those modules.</p>
+</li>
+<li>
+<p>ESP-201 - This is a 26 pin module with pins on 0.1 inch spacing. I
+              could not find any official measurements for the pin
+              locations so the footprint was created from empirical
+              measurements on the unit I have.</p>
+</li>
+<li>
+<p>ESP-12E - This is for the 22 pin variant of the ESP-12. ~~Though all the 
+              esp-12 signals are in the same place on ESP-12E, pin numbers
+              have changed.~~ As of 2016/12/06 the pin numbers on the
+              ESP-12E have been changed to be compatible with the
+              ESP-12. If you need the old pin numbers they are still
+              available on the <code>oldNumbers</code> branch.</p>
+</li>
+<li>
+<p>ESP-07v2 - ESP-07 that is pin compatible with the ESP-12.</p>
+</li>
+<li>
+<p>ESP-13-WROOM-02</p>
+</li>
+<li>
+<p>There is a footprint for the ESP-06, but no supporting
+      schematic symbol.</p>
+</li>
+</ul>
+<p>There are 3d models for the ESP-07v2, ESP-13, ESP-12 and ESP-12E.</p>
+<h2 id="warnings">WARNINGS</h2>
+<ol>
+<li>
+<p>The symbols, footprints, and 3d models have not been tested. They are
+     based on published images and measurements on individual samples.</p>
+</li>
+<li>
+<p>The <code>.dcm</code> file contains HTML links to information on sites I used
+     when creating this library, however I do not have any control over
+     the sites themselves. Follow the links with caution.</p>
+</li>
+<li>
+<p>This library distributed in the hope that it will be useful,
+     but <strong>WITHOUT ANY WARRANTY; without even the implied warranty of</strong>
+     <strong>MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE</strong>.</p>
+</li>
+</ol>
+<h2 id="use">Use</h2>
+<ol>
+<li>
+<p>Clone this archive to a convenient location on your computer. These are
+    the commands I use on Linux to create a copy in
+    <code>~/kicad/libraries/kicad-ESP8266</code>:</p>
+<pre><code>mkdir -p ~/kicad/libraries/
+cd ~/kicad/libraries/
+git clone https://github.com/jdunmire/kicad-ESP8266
+</code></pre>
+</li>
+<li>
+<p>Add <code>ESP8266.lib</code> to the Component Libraries:</p>
+<pre><code>eeschema:Preferences-&gt;Component Libraries-&gt;Add
+</code></pre>
+</li>
+<li>
+<p>Add <code>ESP8266.pretty</code> to the Footprint Libraries:</p>
+<pre><code>pcbnew:Preferences-&gt;Footprint Libraries Wizard
+</code></pre>
+</li>
+<li>
+<p>To make the 3d models usable, add the location from step #1 to list
+    of configured paths as <code>ESPLIB</code>. Use a full path. Continuing with
+    the example step #1:</p>
+<pre><code>kicad:Preferences-&gt;Configure Paths-&gt;Add
+
+    Name: ESPLIB
+    Path: /home/&lt;your_login_name&gt;/kicad/libraries/kicad-ESP8266
+</code></pre>
+</li>
+</ol>
+<h2 id="3d-models">3D Models</h2>
+<p>The 3D models were built using <a href="http://www.openscad.org/">OpenSCAD</a> and
+then colored in <a href="http://www.wings3d.com/">Wings3D</a> to produce the VRML
+(<code>.wrl</code>) format for KiCAD. Wings3D requires a binary STEP format, but
+OpenSCAD writes an ASCII version.
+<a href="http://www.patrickmin.com/meshconv/">meshconv</a> will convert the
+ASCII format to a binary format.</p>
+<p>Here is the workflow I used:</p>
+<ol>
+<li>
+<p>Use OpenScad to build the model. Export the model as STL.</p>
+<ul>
+<li>Build using F6</li>
+<li>File-&gt;Export...-&gt;Export as STL...</li>
+</ul>
+</li>
+<li>
+<p>Use <code>meshconv</code> to translate the file to binary.</p>
+<pre><code>$ meshconv -c stl &lt;STL-FILE-FROM-OpenSCAD&gt; -o &lt;FILENAME&gt;
+</code></pre>
+</li>
+<li>
+<p>Now open Wings3d and import the the <code>FILENAME.stl</code> as a
+ <em>StereoLithography Binary File (*.stl)</em>.</p>
+</li>
+<li>
+<p>Assign colors.</p>
+</li>
+<li>
+<p>Export as <em>VRML 2.0 File (*.wrl)</em></p>
+</li>
+<li>
+<p>The 3D model probably needs to be scaled to match the footprint. Use
+    the <code>kicad:Footprint Editor:Edit-&gt;Edit Properties-&gt;3D Settings</code>
+    dialog. For the ESP-12, the <code>Shape Scale</code> X, Y, and Z values are
+    0.393700.</p>
+</li>
+</ol>
+<p>This repository includes all the intermediate files:</p>
+<ul>
+<li><code>.scad</code> - OpenSCAD model</li>
+<li><code>.stl</code> - OpenSCAD STL</li>
+<li><code>_4wings.stl</code> - STL file converted by <code>meshconv</code></li>
+<li><code>.wings</code> - Wings3D model</li>
+<li><code>.wrl</code> - VRML model for KiCAD</li>
+</ul>
+<h2 id="license">License</h2>
+<p>Copyright 2015,2016 J.Dunmire</p>
+<p>Contact: jedunmire PLUS kicad-ESP8266 AT gmail DOT com</p>
+<p>This file is part of kicad-ESP8266. </p>
+<p>kicad-ESP8266 is licensed under the Creative Commons Attribution-ShareAlike
+4.0 International License. To view a copy of this license visit
+http://creativecommons.org/licenses/by-sa/4.0/.</p>
+</body></html>
